@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-
+import * as Forms from "../Form/Forms";
+import(
+  "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+);
 const ContainerModal = styled.div`
   display: flex;
   position: fixed;
@@ -18,7 +21,7 @@ const ContainerModal = styled.div`
 const ContentModal = styled.div`
   max-width: 500px;
   width: 500px;
-  background: $branco;
+  background: #fff;
   padding: 20px 30px;
   border-radius: 8px;
   justify-items: center;
@@ -49,6 +52,11 @@ const Form = styled.form`
   grid-template-columns: 1fr 1fr;
   align-content: center;
   justify-content: center;
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
 `;
 
 export const Modal = () => {
@@ -57,9 +65,17 @@ export const Modal = () => {
       <ContentModal>
         <ButtonClose>X</ButtonClose>
 
-        <TitleModal>Adicionar Novo servico</TitleModal>
+        <TitleModal>Adicionar Novo Serviço</TitleModal>
 
-        <Form></Form>
+        <Form>
+          <Forms.Input name="Nome" id="nome" label="Nome" width={90} />
+          <Forms.Input name="lente" id="lente" label="Lente" />
+          <Forms.Input
+            name="numeroPedido"
+            id="numeroPedido"
+            label="Numero do Pedido"
+          />
+        </Form>
       </ContentModal>
     </ContainerModal>
   );
