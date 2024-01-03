@@ -83,7 +83,7 @@ export const Modal = () => {
             name="Nome"
             id="nome"
             label="Nome"
-            width={90}
+            width={100}
             classe="span2"
           />
 
@@ -92,6 +92,7 @@ export const Modal = () => {
           <Forms.Input
             type="text"
             name="numeroPedido"
+            width={100}
             id="numeroPedido"
             label="Numero do Pedido"
           />
