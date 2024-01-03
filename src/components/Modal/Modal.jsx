@@ -1,9 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import * as Forms from "../Form/Forms";
-import(
-  "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-);
+import React from 'react';
+import styled from 'styled-components';
+import * as Forms from '../Form/Forms';
+// import(
+//   "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+// );
+
 const ContainerModal = styled.div`
   display: flex;
   position: fixed;
@@ -15,7 +16,7 @@ const ContainerModal = styled.div`
   z-index: 2000;
   justify-content: center;
   align-items: center;
-  font-family: "Poppins";
+  font-family: 'Poppins';
 `;
 
 const ContentModal = styled.div`
@@ -59,6 +60,16 @@ const Form = styled.form`
   }
 `;
 
+const SubmitButton = styled.button`
+  display: block;
+  margin: 20px auto 0 auto;
+  padding: 10px 30px;
+  font-size: 1.125rem;
+  background: #000;
+  color: #fff;
+  border-radius: 5px;
+`;
+
 export const Modal = () => {
   return (
     <ContainerModal>
@@ -68,14 +79,38 @@ export const Modal = () => {
         <TitleModal>Adicionar Novo Serviço</TitleModal>
 
         <Form>
-          <Forms.Input name="Nome" id="nome" label="Nome" width={90} />
-          <Forms.Input name="lente" id="lente" label="Lente" />
           <Forms.Input
+            name="Nome"
+            id="nome"
+            label="Nome"
+            width={90}
+            classe="span2"
+          />
+
+          <Forms.Input name="lente" id="lente" label="Lente" />
+
+          <Forms.Input
+            type="text"
             name="numeroPedido"
             id="numeroPedido"
             label="Numero do Pedido"
           />
+
+          <Forms.Input
+            type="date"
+            label="Numero do Pedido"
+            id="numeroDoPedido"
+            name="numeroDoPedido"
+          />
+
+          <Forms.Input
+            type="date"
+            label="Numero do Pedido"
+            id="numeroDoPedido"
+            name="numeroDoPedido"
+          />
         </Form>
+        <SubmitButton>Enviar</SubmitButton>
       </ContentModal>
     </ContainerModal>
   );

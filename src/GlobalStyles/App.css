@@ -8,3 +8,8 @@ body {
   background: #eeeded;
   color: #000;
 }
+
+.span2 {
+  grid-column: 1/-1;
+  width: 100%;
+}
