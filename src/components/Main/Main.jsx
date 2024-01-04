@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Table from '../Table/table';
+import { Modal } from '../Modal/Modal';
 
 const Content = styled.div`
   display: flex;
@@ -41,21 +42,24 @@ const Icon = styled.i`
 `;
 
 const Main = () => {
+  const [ativo, setAtivo] = React.useState(false);
+
   return (
     <ContainerMain>
       <Content>
-        <Button text="Adicionar Serviço">
+        <Button onClick={() => setAtivo(true)}>
           Adicionar Serviço
           <Icon className="fa-solid fa-plus" />
         </Button>
 
-        <Button text="Serviços do dia">
+        <Button>
           Serviços do dia
           <Icon className="fa-solid fa-magnifying-glass" />
         </Button>
       </Content>
 
       <Table />
+      {ativo && <Modal setAtivo={setAtivo} />}
     </ContainerMain>
   );
 };

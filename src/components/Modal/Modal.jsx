@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import * as Forms from '../Form/Forms';
+import Input from '../Form/Input';
+
 // import(
 //   "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
 // );
@@ -70,46 +71,23 @@ const SubmitButton = styled.button`
   border-radius: 5px;
 `;
 
-export const Modal = () => {
+export const Modal = ({ setAtivo }) => {
   return (
     <ContainerModal>
       <ContentModal>
-        <ButtonClose>X</ButtonClose>
+        <ButtonClose onClick={() => setAtivo((ativo) => !ativo)}>X</ButtonClose>
 
         <TitleModal>Adicionar Novo Serviço</TitleModal>
 
         <Form>
-          <Forms.Input
-            name="Nome"
-            id="nome"
-            label="Nome"
-            width={100}
-            classe="span2"
-          />
+          <Input name="Nome" width={100} classe="span2" label="Nome" />
+          <Input name="lente" id="lente" label="Lente" />
 
-          <Forms.Input name="lente" id="lente" label="Lente" />
+          <Input type="text" width={100} label="Numero do Pedido" />
 
-          <Forms.Input
-            type="text"
-            name="numeroPedido"
-            width={100}
-            id="numeroPedido"
-            label="Numero do Pedido"
-          />
+          <Input type="date" name="dataIda" label="Data de Ida" />
 
-          <Forms.Input
-            type="date"
-            label="Numero do Pedido"
-            id="numeroDoPedido"
-            name="numeroDoPedido"
-          />
-
-          <Forms.Input
-            type="date"
-            label="Numero do Pedido"
-            id="numeroDoPedido"
-            name="numeroDoPedido"
-          />
+          <Input type="date" name="dataVolta" label="Data de Volta" />
         </Form>
         <SubmitButton>Enviar</SubmitButton>
       </ContentModal>

@@ -1,10 +1,10 @@
-import React from "react";
-import { TableContent, Tbody, Thead, ContainerTable } from "./Style";
+import React from 'react';
+import { TableContent, Tbody, Thead, ContainerTable } from './Style';
 
 const Table = () => {
   return (
     <ContainerTable>
-      <TableContent border="2">
+      <TableContent>
         <Thead>
           <tr>
             <th>Nome</th>

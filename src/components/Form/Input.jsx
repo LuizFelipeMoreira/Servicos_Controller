@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export const Inputs = styled.input`
+const Inputs = styled.input`
   padding: 8px;
   margin-bottom: 10px;
   outline: none;
@@ -10,7 +10,7 @@ export const Inputs = styled.input`
   border: 1px solid black;
 `;
 
-export const Input = ({ type, id, name, label, width, classe }) => {
+const Input = ({ type, id, name, label, width, classe }) => {
   return (
     <div className={classe}>
       <label htmlFor={id}>{label}</label>
@@ -18,3 +18,5 @@ export const Input = ({ type, id, name, label, width, classe }) => {
     </div>
   );
 };
+
+export default Input;
