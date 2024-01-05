@@ -24,8 +24,14 @@ export const Thead = styled.thead`
   color: #fff;
 
   th {
-    border-radius: 5px;
-    padding: 5px;
+    padding: 8px;
+  }
+
+  th:first-child {
+    border-radius: 5px 0 0;
+  }
+  th:last-child {
+    border-radius: 0 5px 0 0;
   }
 `;
 

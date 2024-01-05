@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Container = styled.header`
   width: 100%;
@@ -12,7 +12,7 @@ const Container = styled.header`
 
 const Logo = styled.h1`
   font-size: 2.25rem;
-  font-family: "Josefin Sans";
+  font-family: 'Josefin Sans';
   font-weight: 400;
 `;
 
