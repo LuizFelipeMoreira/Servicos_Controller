@@ -1,6 +1,6 @@
 import React from 'react';
 import Table from '../Table/table';
-import { Modal } from '../Modal/Modal';
+import Modal from '../Modal/Modal';
 import { Button, ContainerMain, Content, Icon } from './style';
 
 const Main = () => {

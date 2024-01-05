@@ -3,8 +3,9 @@ import styled from 'styled-components';
 import Input from '../Form/Input';
 import { ButtonClose, ContainerModal, ContentModal } from './style';
 import { Form, SubmitButton, TitleModal } from './style';
+import PropTypes from 'prop-types';
 
-export const Modal = ({ setAtivo }) => {
+const Modal = ({ setAtivo }) => {
   return (
     <ContainerModal>
       <ContentModal>
@@ -23,19 +24,21 @@ export const Modal = ({ setAtivo }) => {
 
           <Input name="lente" id="lente" label="Lente" />
 
-          <Input
-            type="text"
-            width={100}
-            id="numeroPedido"
-            label="Numero do Pedido"
-          />
+          <Input type="text" id="numeroPedido" label="Numero do Pedido" />
 
-          <Input type="date" name="dataIda" id="dataIda" label="Data de Ida" />
+          <Input
+            type="date"
+            name="dataIda"
+            id="dataIda"
+            width={80}
+            label="Data de Ida"
+          />
 
           <Input
             type="date"
             name="dataVolta"
             id="dataVolta"
+            width={80}
             label="Data de Volta"
           />
         </Form>
@@ -45,3 +48,9 @@ export const Modal = ({ setAtivo }) => {
     </ContainerModal>
   );
 };
+
+Modal.propTypes = {
+  setAtivo: PropTypes.func,
+};
+
+export default Modal;
