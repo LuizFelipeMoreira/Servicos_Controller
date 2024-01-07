@@ -8,7 +8,7 @@ const Main = () => {
   const [data, setData] = React.useState({
     nome: '',
     lente: '',
-    nmeroPedido: '',
+    numeroPedido: '',
     dataIda: '',
     dataVolta: '',
   });
@@ -28,7 +28,7 @@ const Main = () => {
       </Content>
 
       <Table />
-      {ativo && <Modal setAtivo={setAtivo} />}
+      {ativo && <Modal setAtivo={setAtivo} data={data} setData={setData} />}
     </ContainerMain>
   );
 };

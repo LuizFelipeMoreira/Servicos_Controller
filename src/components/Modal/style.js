@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const ContainerModal = styled.div`
   display: flex;
@@ -23,6 +23,18 @@ export const ContentModal = styled.div`
   border-radius: 8px;
   justify-items: center;
   position: relative;
+  animation: showModal 0.5s ease-in-out;
+
+  @keyframes showModal {
+    from {
+      opacity: 0;
+      transform: translate3d(-30px, -50px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: initial;
+    }
+  }
 `;
 
 export const TitleModal = styled.h1`
