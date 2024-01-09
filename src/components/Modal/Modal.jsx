@@ -11,7 +11,7 @@ import {
 } from './style';
 import PropTypes from 'prop-types';
 
-const Modal = ({ setAtivo }) => {
+const Modal = ({ setAtivo, setData, data }) => {
   return (
     <ContainerModal>
       <ContentModal>
