@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import Theme from '../../Theme';
 
 export const ContainerModal = styled.div`
   display: flex;
@@ -13,17 +14,22 @@ export const ContainerModal = styled.div`
   justify-content: center;
   align-items: center;
   font-family: 'Poppins';
+  /* From https://css.glass */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.2px);
+  -webkit-backdrop-filter: blur(1.2px);
 `;
 
 export const ContentModal = styled.div`
   max-width: 500px;
   width: 500px;
-  background: #fff;
+  background: #0d1117;
   padding: 20px 30px;
   border-radius: 8px;
   justify-items: center;
   position: relative;
-  animation: showModal 0.5s ease-in-out;
+  animation: showModal 0.3s ease;
+  color: white;
 
   @keyframes showModal {
     from {
@@ -51,8 +57,8 @@ export const ButtonClose = styled.button`
   right: -10px;
   border: none;
   cursor: pointer;
-  background: #000;
-  color: #fff;
+  background: ${Theme.colors.black0};
+  color: ${Theme.colors.white};
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 `;
 
@@ -76,7 +82,9 @@ export const SubmitButton = styled.button`
   margin: 20px auto 0 auto;
   padding: 10px 30px;
   font-size: 1.125rem;
-  background: #000;
-  color: #fff;
+  background: ${Theme.colors.black0};
+  color: ${Theme.colors.white};
   border-radius: 5px;
+  border: none;
+  cursor: pointer;
 `;

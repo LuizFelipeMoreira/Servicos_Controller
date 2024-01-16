@@ -1,13 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
+import Theme from '../../Theme';
 
 const Container = styled.header`
   width: 100%;
-  background: black;
+  background: ${Theme.colors.black1};
   color: white;
   padding: 20px;
   text-align: center;
   margin-bottom: 70px;
+  border-bottom: 1px solid #21262d;
 `;
 
 const Logo = styled.h1`
