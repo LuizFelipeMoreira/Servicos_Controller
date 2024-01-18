@@ -1,19 +1,26 @@
-import React from 'react';
 import styled from 'styled-components';
 import Theme from '../../Theme';
-
-export const Content = styled.div`
-  display: flex;
-  flex-wrap: nowrap;
-  margin: 0 auto;
-  padding-bottom: 40px;
-`;
 
 export const ContainerMain = styled.main`
   display: flex;
   flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
+
+  @media (max-width: 800px) {
+    max-width: 90%;
+  }
+`;
+
+export const Content = styled.div`
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+  padding-bottom: 40px;
+
+  @media (max-width: 800px) {
+    gap: 30px;
+  }
 `;
 
 export const Button = styled.button`
@@ -29,6 +36,16 @@ export const Button = styled.button`
   &:hover {
     background: #fcf9f9;
   }
+
+  @media (max-width: 800px) {
+    font-size: 1.125rem;
+    margin: 0 auto;
+    padding: 15px 20px;
+  }
+  @media (max-width: 800px) {
+    font-size: 1rem;
+    padding: 15px 20px;
+  }
 `;
 
 export const Icon = styled.i`
@@ -38,4 +55,8 @@ export const Icon = styled.i`
   padding: 20px;
   border-radius: 50%;
   color: ${Theme.colors.white};
+
+  @media (max-width: 800px) {
+    margin-left: 30px;
+  }
 `;

@@ -13,15 +13,22 @@ const Container = styled.header`
 `;
 
 const Logo = styled.h1`
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   font-family: 'Josefin Sans';
   font-weight: 400;
+
+  span {
+    color: yellow;
+  }
 `;
 
 const Header = () => {
   return (
     <Container>
-      <Logo>BellaVision Serviços</Logo>
+      <Logo>
+        Bella
+        <span>Vision</span>
+      </Logo>
     </Container>
   );
 };

@@ -4,7 +4,9 @@ import { TableContent, Tbody, Thead, ContainerTable } from './Style';
 const Table = () => {
   return (
     <ContainerTable>
-      <h1 style={{ color: '#fff', textAlign: 'center' }}>Servicos</h1>
+      <h1 style={{ color: '#fff', textAlign: 'center', fontWeight: '600' }}>
+        Serviços
+      </h1>
       <TableContent>
         <Thead>
           <tr>
